@@ -334,7 +334,11 @@ public class P4_PantojaF {
             }
         });
 
-        printPatients(patients);
+        for (int[] patient : patients) {
+            if(patient[0] > 0){
+                System.out.println("TIS: " + patient[0] + ", Simptoma: " + patient[1] + ", Exploració: " + patient[2] + ", Nivell de prioritat: " + patient[3] + ", Temperatura: " + patient[4] + ", ordre d'atenció: " + patient[5]);
+            }
+        }
     }
 
     private static void printPatients(int[][] patients) {
